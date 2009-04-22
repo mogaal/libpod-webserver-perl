@@ -1,0 +1,16 @@
+Source: libpod-webserver-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: perl (>= 5.6.0-12)
+Maintainer: Alejandro Garrido Mota <garridomota@gmail.com>
+Standards-Version: 3.8.1
+Homepage: http://search.cpan.org/dist/Pod-Webserver/
+
+Package: libpod-webserver-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+Description: a miniature web server for reading Pod in web browsers
+ Pod::Webserver can be run as an application that works as a minimal web
+ server to serve local Perl documentation. It's like perldoc except it works
+ through your browser.
