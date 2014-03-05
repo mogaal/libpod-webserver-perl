@@ -1,0 +1,66 @@
+Revision history for Perl module Pod::Webserver:
+
+3.09  Wed Feb 26 15:53:00 2014
+	- Use Test::TCP's Net::EmptyPort to pick a port to use for testing. See daemon.t.
+		Note: The env var $PODWEBSERVERPORT (used only for testing) still takes precedence.
+
+3.08  Fri Feb 14 13:28:00 2014
+	- Change t/daemon.t to use $ENV{PODWBSERVERPORT} || 39383, not 8020, for both server and client.
+		This means tests run even if 'podwebserver' is aleady running.
+
+3.07  Fri Feb 14 12:00:00 2014
+	- Split out each package into its own file.
+	- Rearrange methods per file into alphabetical order.
+	- Clean up datestamps in this file.
+
+3.06  Mon Feb 10 12:00:00 2014
+	- Ron Savage is now co-maint.
+	- Remove 'require 5;' from the source. If you're running Perl V 4, you'll have even more problems now.
+	- Add a -t (timeout) parameter. The unit is seconds. Timeout defaults (as always) to 18,000 = 5 hours.
+		This addresses RT#21582. Thanx to Ivor Williams for the 2006 report.
+		Yes, it has been a regrettably long time, hasn't it?
+	- Remove spaces in option string passed to Getopt::Std.
+		This addresses RT#44520. Thanx to Marek.Rouchal for the 2009 report.
+		This problem was also noted in RT#55106. Thanx to COSMICNET for the 2010 report.
+		This problem was also noted in RT#62939. Thanx to Allison Randal for the 2010 report.
+	- Add -d (dirs to include) and -e (dirs to exclude) parameters.
+		This addresses RT#55106. Thanx to COSMICNET for the 2010 patch.
+	- Flag RT#59890 as not-an-error, since http://localhost:8020/pods/perlfaq is not (presumably) output by
+		the code, and hence is not the jumping-off point for any within-FAQ links.
+	- Re-word error messages, and use die rather than a combination of die and Carp.
+	- Change licence from Perl to Artistic 2, since the Perl licence is not listed at http://opensource.org/licenses.
+	- Switch tests from using Test to Test::More.
+	- Move podwebserver script into bin/.
+	- Add Build.PL.
+	- Create repository on github and add to Build.PL and Makefile.PL.
+	- Add t/version.t.
+	- Add xt/author/pod.t.
+	- Expand docs slightly.
+	- Ensure port and timeout parameters are integers. Print help and exit if not.
+	- Expand help message.
+	- Include File::Spec in the pre-reqs. It's used by the new -d and -e options.
+	- Replace brief MANIFEST.SKIP with long version (copied from GraphViz2).
+	- Reformat this file so it can be read by Module::Metadata::Changes' ini.report.pl.
+	- Rename ChangeLog to Changes.
+	- Add Changelog.ini (output of ini.report.pl).
+
+3.05  Wed Jan 09 12:00:00 2008
+	- Allison Randal <allison@perl.org>
+	- Added an explicit VERSION to Pod::Webserver::Daemon, to pass the tests on Perl version 5.10.0.
+
+3.04  Tue Sep 12 12:00:00 2006
+	- Allison Randal <allison@perl.org>
+	- Applied a patch from Nicholas Clark to eliminate the dependency on LWP, so the module
+		could be incorporated into the Perl core. Mad props to Nick for the networking code!
+
+3.03  Sun Jun 20 12:00:00 2004
+	- Sean M. Burke <sburke@cpan.org>
+	- No code changes; I merely added some extra docs about -T and security and @INC things.
+	- Thanks for all your supportive email!  I am surprised by what a hit this module has become!
+
+3.02  Tue May 25 12:00:00 2004
+	- Sean M. Burke <sburke@cpan.org>
+	- First released version.
+
+1.00  Mon May 24 12:00:00 2004
+	- Sean M. Burke <sburke@cpan.org>
