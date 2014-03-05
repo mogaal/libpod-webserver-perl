@@ -1,3 +1,23 @@
+libpod-webserver-perl (3.09-1) unstable; urgency=low
+
+  * New upstream release.
+  * d/control:
+    - Update Standard-Version field.
+    - Update email in Maintainer field.
+    - Update Homepage field, now pointing to metacpan.
+    - Add Vcs-Git and Vcs-Browser field.
+    - Update debhelper Build-Depends to >= 9.
+    - Add netbase to B-D-I because t/daemon.t uses 'getprotobyname' function 
+      and it's looking for /etc/protocols (inside netbase package). 
+  * Update d/compat to 9.
+  * d/watch: Use metacpan intead cpan.
+  * Update d/copyright to copyright-format 1.0.
+  * Update d/rules to dh9.
+  * Add d/libpod-webserver-perl.manpages and install d/libpod-webserver-perl.1
+  * Remove d/libpod-webserver-perl.docs
+
+ -- Alejandro Garrido Mota <alejandro@debian.org>  Wed, 05 Mar 2014 12:55:53 -0430
+
 libpod-webserver-perl (3.05-1) unstable; urgency=low
 
   * New upstream release
