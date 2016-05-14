@@ -8,9 +8,9 @@ Build-Depends-Indep: perl,
  netbase,
  libmodule-build-perl
 Maintainer: Alejandro Garrido Mota <alejandro@debian.org>
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Vcs-Browser: https://github.com/mogaal/libpod-webserver-perl
-Vcs-Git: git://github.com/mogaal/libpod-webserver-perl.git
+Vcs-Git: https://github.com/mogaal/libpod-webserver-perl.git
 Homepage: https://metacpan.org/release/Pod-Webserver
 
 Package: libpod-webserver-perl
