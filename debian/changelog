@@ -1,4 +1,4 @@
-libpod-webserver-perl (3.11-1) UNRELEASED; urgency=medium
+libpod-webserver-perl (3.11-1) unstable; urgency=medium
 
   * New upstream release 
   * Update copyright dates
