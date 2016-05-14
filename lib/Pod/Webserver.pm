@@ -14,7 +14,7 @@ use IO::Socket;
 use File::Spec;
 use File::Spec::Unix ();
 
-our $VERSION = '3.10';
+our $VERSION = '3.11';
 
 # ------------------------------------------------
 
@@ -149,8 +149,8 @@ sub httpd {
   my $self = @_ ? shift(@_) : __PACKAGE__;
   $self = $self->new unless ref $self;
   $self->{'_batch_start_time'} = time();
-  $self->_get_options;
   $self->_init_options;
+  $self->_get_options;
 
   $self->contents_file('/');
   $self->prep_for_daemon;
@@ -501,8 +501,8 @@ L<perldoc> except it works through your browser.
 
 C<podwebserver -h> displays help:
 
-	Pod::Webserver version 3.06
-	 Running under perl version 5.018002 for linux
+	Pod::Webserver version 3.11
+	 Running under perl version 5.020002 for linux
 	Usage:
 	  podwebserver                   = Start podwebserver on localhost:8020. Search @INC
 	  podwebserver -p 1234           = Start podwebserver on localhost:1234
