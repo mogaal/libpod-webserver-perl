@@ -1,6 +1,12 @@
+libpod-webserver-perl (3.11-2) UNRELEASED; urgency=medium
+
+  * Trim trailing whitespace.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sat, 23 Jul 2022 19:25:46 -0000
+
 libpod-webserver-perl (3.11-1) unstable; urgency=medium
 
-  * New upstream release 
+  * New upstream release
   * Update copyright dates
   * Update Standards-Version field
   * Change Vcs-Git field from git:// to https://
@@ -10,7 +16,7 @@ libpod-webserver-perl (3.11-1) unstable; urgency=medium
 libpod-webserver-perl (3.10-1) unstable; urgency=medium
 
   * New upstream release
-  * d/control: 
+  * d/control:
       - Update Standard-Version field.
       - Add libmodule-build-perl module in BDI.
 
@@ -25,8 +31,8 @@ libpod-webserver-perl (3.09-1) unstable; urgency=low
     - Update Homepage field, now pointing to metacpan.
     - Add Vcs-Git and Vcs-Browser field.
     - Update debhelper Build-Depends to >= 9.
-    - Add netbase to B-D-I because t/daemon.t uses 'getprotobyname' function 
-      and it's looking for /etc/protocols (inside netbase package). 
+    - Add netbase to B-D-I because t/daemon.t uses 'getprotobyname' function
+      and it's looking for /etc/protocols (inside netbase package).
   * Update d/compat to 9.
   * d/watch: Use metacpan intead cpan.
   * Update d/copyright to copyright-format 1.0.
@@ -41,7 +47,7 @@ libpod-webserver-perl (3.05-1) unstable; urgency=low
   * New upstream release
   * Improve Format-Specification in debian/copyright
   * Improve debian/control
-  * Add watch file 
+  * Add watch file
 
  -- Alejandro Garrido Mota <garridomota@gmail.com>  Tue, 21 Apr 2009 20:02:42 -0430
 
@@ -81,4 +87,3 @@ libpod-webserver-perl (3.04-1) unstable; urgency=low
   * Initial Release (Closes: #403929).
 
  -- Alejandro Garrido Mota <garridomota@gmail.com>  Tue, 19 Dec 2006 23:32:40 -0400
-
